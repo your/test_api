@@ -1,7 +1,7 @@
 module API
-  module V1
+  module P
     class Users < Grape::API
-      include API::PRIVATE::Defaults
+      include API::P::Defaults
       resource :users do
         desc "Return list of users"
         get do

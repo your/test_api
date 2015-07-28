@@ -1,12 +1,12 @@
 module API
-  module V1
+  module P
     module Defaults
       # if you're using Grape outside of Rails, you'll have to use Module#included hook
       extend ActiveSupport::Concern
 
       included do
         # common Grape settings
-        version 'v1'
+        version 'p'
         format :json
 
         # global handler for simple not found case
