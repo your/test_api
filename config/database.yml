@@ -4,9 +4,10 @@ default: &default
   encoding: UTF8
   username: postgres
   password:
-  pool: 5 # TODO: https://devcenter.heroku.com/articles/concurrency-and-database-connections
+  pool: 5
+  # TODO: https://devcenter.heroku.com/articles/concurrency-and-database-connections
   timeout: 5000
-	  
+
 development:
   <<: *default
   database: my_habits_development
