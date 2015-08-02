@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   
-  ## API routes
-  mount API::Base => '/api'
-    
+
+  namespace :api do
+    resources :users, only: [:index, :create, :show, :update, :destroy]
+    resources :habit_systems, only: [:index, :create, :show, :update, :destroy]
+    resources :sessions, only: [:create]
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
