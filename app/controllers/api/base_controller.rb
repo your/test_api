@@ -14,6 +14,9 @@ class Api::BaseController < ApplicationController
 
   def authenticate_user!
     token, options = ActionController::HttpAuthentication::Token.token_and_options(request)
+ 
+    # TODO: make authentication stronger, and handle token exp/reissue
+    
     #p token
     #p options
 
