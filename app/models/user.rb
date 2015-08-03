@@ -6,8 +6,7 @@ class User < ActiveRecord::Base
   has_secure_password
   has_secure_token
   
-  has_many :habit_systems
-  has_many :habits
+  has_many :habit_systems, dependent: :destroy
         
   #def generate_authentication_token
   #  loop do

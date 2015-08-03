@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     resources :users, only: [:index, :create, :show, :update, :destroy]
+    resources :habits, only: [:index, :create, :show, :update, :destroy]
     resources :habit_systems, only: [:index, :create, :show, :update, :destroy]
     resources :sessions, only: [:create]
   end
